@@ -2,14 +2,14 @@
 
 # moves ~/.local/share/nvim to current dir and deletes it
 remove_current_nvim_config() {
-    mv ~/.config/nvim .backup/nvim.bak
-    mv ~/.local/share/nvim .backup/share/nvim.bak
+    mv ~/.config/nvim ./backup/nvim.bak
+    mv ~/.local/share/nvim ./backup/share/nvim.bak
 }
 
 # install nvim templete
 install_nvim_config() {
-    cp -r ./config/nvim ~/.config/nvim
-    cp -r ./.local/share/nvim ~/.local/share/nvim
+    cp -r ./nvim/config/nvim ~/.config/nvim
+    cp -r ./nvim/.local/share/nvim ~/.local/share/nvim
 }
 
 ensure_ripgrep() {
